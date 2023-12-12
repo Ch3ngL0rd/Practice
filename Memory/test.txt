@@ -1,0 +1,11 @@
+Implement a Binary Tree: Write code to create a basic binary tree with insert and display functions.
+Tree Traversal: Implement in-order, pre-order, and post-order traversals in a binary tree.
+Find the Height of a Tree: Write a function to calculate the height of a binary tree.
+Level Order Traversal: Implement a level order traversal (or breadth-first traversal) for a tree.
+Check for Balanced Tree: Create a function to check if a binary tree is balanced.
+Find the Minimum and Maximum Value: Write functions to find the minimum and maximum value in a binary tree.
+Mirror a Binary Tree: Implement a function to convert a binary tree into its mirror tree.
+Path Sum: Given a tree and a sum, check if there's a path from the root down to a leaf such that adding up all the values along the path equals the given sum.
+Lowest Common Ancestor: Find the lowest common ancestor of two nodes in a binary tree.
+Diameter of a Tree: Calculate the diameter of a binary tree (the length of the longest path between two nodes).
+

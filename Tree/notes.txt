@@ -1,0 +1,102 @@
+Self-testing Questions:
+What are primitive data types?
+What is a recursive function? (know deeply)
+What is the base case of the recursive function? Give examples.
+Why do you return the root for BST?
+
+Reserach Questions:
+
+
+Zac Thoughts:
+
+Errors:
+
+Didn't RTQ look at the return type - assumed it wanted the node not the value
+```
+int findMaximum(TreeNode *root) {
+    // Implement the logic to find the maximum value in the BST
+    if (root == NULL || root->right == NULL) {
+        return root;
+    }
+    return findMaximum(root->right);
+}
+
+int findMaximum(TreeNode *root) {
+    // Implement the logic to find the maximum value in the BST
+    if (root == NULL || root->right == NULL) {
+        return root->value;
+    }
+    return findMaximum(root->right);
+}
+```
+
+Why did I need value? Thought I needed it to keep track of the number of nodes beneath it.
+Reality: The current node doesn't need to keep track. It just needs to propogate it to the root node.
+```
+// Returns how many nodes are below it
+int countNodesRecursive(TreeNode *root,value) {
+    if (root == NULL) return 1;
+    return (1 + countNodesRecursive(root->left,value) + countNodesRecursive(root->right,value));
+}
+    
+int countNodes(TreeNode *root) {
+    // Implement the logic to count the nodes in the BST
+    return countNodesRecursive(root);
+}
+
+// Returns how many nodes are below it
+int countNodesRecursive(TreeNode *root) {
+    if (root == NULL) return 0;
+    return (1 + countNodesRecursive(root->left) + countNodesRecursive(root->right));
+}
+    
+int countNodes(TreeNode *root) {
+    // Implement the logic to count the nodes in the BST
+    return countNodesRecursive(root);
+}
+```
+
+Useless `value` to hold the sum. Can just propogate up.
+```
+int sumOfNodesRecursive(TreeNode *root, int value) {
+    if (root == NULL) return 0;
+    return (root->value + sumOfNodesRecursive(root->left,0) + sumOfNodesRecursive(root->right,0));
+}
+
+int sumOfNodes(TreeNode *root) {
+    // Implement the logic to calculate the sum of all values in the BST
+    return sumOfNodesRecursive(root,0);
+}
+
+int sumOfNodesRecursive(TreeNode *root) {
+    if (root == NULL) return 0;
+    return (root->value + sumOfNodesRecursive(root->left) + sumOfNodesRecursive(root->right));
+}
+
+int sumOfNodes(TreeNode *root) {
+    // Implement the logic to calculate the sum of all values in the BST
+    return sumOfNodesRecursive(root);
+}
+```
+
+Forgot to check if the root->left was null + reassign
+```
+// Function to insert a value into the tree
+TreeNode* insert(TreeNode *root, int value) {
+    // Implement insertion logic
+    // Return the updated root
+    if (root == NULL) {
+        root = createNode(value);
+    } else if (value < root->value) {
+        if (root->left == NULL) {
+            root->left = insert(root->left,value);
+        } else {
+            insert(root->left,value);
+        }
+    } else if (value > root->value) {
+        if (root->right == NULL) { root->right = insert(root->right,value); }
+        else { insert(root->right,value); }
+    }
+    return root;
+}
+```

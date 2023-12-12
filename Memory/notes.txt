@@ -1,0 +1,29 @@
+
+Questions for self-testing:
+How does a source program turn into an executable?
+Explain what the memory hierachy is.
+What is conccurency? What's the difference between concurrency and parallelism?
+Explain what virtual memory is
+What is Amhdahl's Law?
+Explain what spatial and temporal locality are.
+What is stride-k refernece patterns, and how do they affect performance?
+What's the relationship between access speed and cost?
+What is a cache?
+Explain the cases that occur when the CPU requests memory from the cache?
+What happens when a cache misses and there is a k+1 cache?
+
+Questions to research:
+What is a register file??
+Investigate - processes, virtual memory and files
+L1 i-cache vs L1 d-cache
+What is a memory word?
+What are word size - 32 bit vs 64 bit but understand more
+What is a clock cycle?
+What is the latency between Australia and America, Sydney, Friends House?
+
+Zac Notes:
+Using AI to create reserach material on current events - case studies n shit.
+Show HN: Semantic Diff Editor!!!
+Show HN: optimising a program - Advent of Code. How fast can I get it?
+Is it worth it to spec fully into rust? What's a cool rust project?
+Rust lang / Python - what is the keyboard io lib / how does that work?
