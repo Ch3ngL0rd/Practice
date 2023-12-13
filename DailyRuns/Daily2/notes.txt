@@ -1,0 +1,17 @@
+// Function to insert a value into the tree
+TreeNode* insert(TreeNode *root, int value) {
+    // Implement insertion logic
+    // Return the updated root
+    if (root == NULL) {
+        return createNode(value);
+    }
+    if (value < root->value) {
+        root->left = insert(root->left,value);
+    } else if (value > root->value) {
+        root->right = insert(root->right,value);
+    }
+    return root;
+}
+Why does this work!?
+Pointers n shit
+Terminal to something idk posting
