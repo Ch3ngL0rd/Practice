@@ -1,0 +1,4 @@
+Create and Initialize: Create a std::vector and initialize it with values.
+Access Elements: Access elements using the [] operator and at() method.
+Iterate: Use different methods to iterate over a vector (for loop, range-based for loop, iterators).
+Modify Elements: Add elements to the end, insert in the middle, update existing elements, and remove elements.
